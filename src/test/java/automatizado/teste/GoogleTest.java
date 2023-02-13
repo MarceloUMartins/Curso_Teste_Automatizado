@@ -4,7 +4,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
-import automatizado.pageObject.GooglePO;
+
+import page.GooglePO;
 
 
 public class GoogleTest extends BaseTeste {

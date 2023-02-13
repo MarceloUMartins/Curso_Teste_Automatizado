@@ -1,4 +1,4 @@
-package automatizado.pageObject;
+package page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +16,7 @@ public abstract class BasePO {
 	/**
 	 * Construtor base para criação da fabrica de elementos(PageFactory).
 	 * */
-	protected BasePO(WebDriver driver) {
+	public BasePO(WebDriver driver) {
 		this.driver = driver;
 				
 		PageFactory.initElements(driver, this);
