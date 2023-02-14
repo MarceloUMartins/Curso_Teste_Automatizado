@@ -24,5 +24,9 @@ public class LoginPO extends BasePO{
 		super(driver);
 		
 	}
+	
+	public String obterMensagem() {
+		return this.spanMensagem.getText();
+	}
 
 }

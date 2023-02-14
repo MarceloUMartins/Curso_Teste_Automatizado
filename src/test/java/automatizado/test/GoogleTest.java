@@ -1,4 +1,4 @@
-package automatizado.teste;
+package automatizado.test;
 
 import static org.junit.Assert.assertTrue;
 
@@ -8,12 +8,13 @@ import org.junit.Test;
 import page.GooglePO;
 
 
-public class GoogleTest extends BaseTeste {
+public class GoogleTest extends BaseTest {
 
 	public static GooglePO  googlePage;
 		
 	@BeforeClass
 	public static void prepararTeste() {
+		driver.get("https://www.google.com.br/");
 		googlePage = new GooglePO(driver);
 	}
 	
