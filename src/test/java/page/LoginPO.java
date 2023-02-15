@@ -48,4 +48,9 @@ public class LoginPO extends BasePO{
 		
 	}
 
+	public String obterTituloPagina() {
+		return driver.getTitle();
+	}
+	
+	
 }
