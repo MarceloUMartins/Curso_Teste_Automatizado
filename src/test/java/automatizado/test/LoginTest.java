@@ -10,6 +10,7 @@ import page.LoginPO;
 public class LoginTest extends BaseTest {
 
 	public static LoginPO loginPage;
+		
 	
 	@BeforeClass
 	public static void prepararTeste() {
@@ -19,13 +20,34 @@ public class LoginTest extends BaseTest {
 	@Test
 	public void TC001_naoDeveLogarNoSistemaComEmailESenhaVazios(){
 	
-		loginPage.inputEmail.sendKeys("");
-		loginPage.inputSenha.sendKeys("");
+		loginPage.executarAcaoDeLogar("", "");
 		
-		loginPage.bottonEntrar.click();
 		String mensagem = loginPage.obterMensagem();
 		
 		assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
 		
 	}
+	
+	@Test
+	public void TC002_naoDeveLogarNoSistemaComEmailIncorretoESenhaVazia(){
+	
+		loginPage.executarAcaoDeLogar("Teste", "");
+		
+		String mensagem = loginPage.obterMensagem();
+		
+		assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
+
+	}
+	
+	@Test
+	public void TC003_naoDeveLogarNoSistemaComEmailVazioESenhaIncorreta(){
+	
+		loginPage.executarAcaoDeLogar("", "Teste");
+		
+		String mensagem = loginPage.obterMensagem();
+		
+		assertEquals(mensagem, "Informe usuário e senha, os campos não podem ser brancos.");
+					
+	}
+	
 }
