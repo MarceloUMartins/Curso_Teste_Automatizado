@@ -13,8 +13,7 @@ import page.LoginPO;
 public class LoginTest extends BaseTest {
 
 	public static LoginPO loginPage;
-		
-	
+			
 	@BeforeClass
 	public static void prepararTeste() {
 		loginPage = new LoginPO(driver);

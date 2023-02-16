@@ -11,4 +11,10 @@ Passo a passo para criação de testes automatizados
 	2.2 Fazer a herança do arquivo BaseTeste.java - ok
 	2.3 Criar um metodo inicial que saiba instanciar uma PO de login. - ok
 	2.4 Criar os testes baseados na Planilha
-		2.4.1 Não deve logar no sistema com email e senha vazios.	
+		2.4.1 Não deve logar no sistema com usuario e senha vazios.	- ok
+		2.4.2 Não deve logar no sistema com usuario incorreto e senha vazios. - ok
+		2.4.3 Não deve logar no sistema com usuario vazio e senha incorreta. - ok
+		2.4.4 Não deve logar no sistema com usuario incorreto e senha incorreta.	- ok
+		2.4.5 Não deve logar no sistema com usuario correto e senha incorreta.	- ok
+		2.4.6 Não deve logar no sistema com usuario incorreto e senha correta.	- ok
+		2.4.7 Deve logar no sistema com usuario correto e senha correta.	- ok

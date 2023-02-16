@@ -23,4 +23,8 @@ public abstract class BasePO {
 		
 			} 
 	
+	public String obterTituloPagina() {
+		return driver.getTitle();
+	}
+	
 }
